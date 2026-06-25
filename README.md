@@ -1,3 +1,3 @@
 mod urls
 
-buyer/seller: `https://github.com/EllPrivico/sandboxels-mods/raw/refs/heads/main/survival-buyer-seller.js`
+buyer/seller: `https://cdn.jsdelivr.net/gh/EllPrivico/sandboxels-mods@refs/heads/main/survival-buyer-seller.js`
