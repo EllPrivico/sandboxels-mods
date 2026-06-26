@@ -52,12 +52,12 @@ function mbuyupdate(){
         if (element.indexOf("*") !== -1) { amount = parseInt(element.split("*")[1]); name = element.split("*")[0]; }
         var elemname = name;
         name = (elements[elemname].name||name).replace(/_/g, " ").replace(".","   ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}).replace("   ",".").replace(/ /g, "");
-        var temp = ``
-        if (amount!=1){
-            temp+=`${amount} pack of `
-        }
-        temp += `$(element) for $${price}`
-        line.insertAdjacentHTML("beforeend", temp);
+        //var temp = ``
+        //if (amount!=1){
+        //    temp+=`${amount} pack of `
+        //}
+        //temp += `$(element) for $${price}`
+        //line.insertAdjacentHTML("beforeend", temp);
     }
 }
 
