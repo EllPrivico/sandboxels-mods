@@ -10,7 +10,9 @@ elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        alert(Object.keys(elements[pixel.element].reactions).includes("radiation"));
+        if(Object.keys(elements[pixel.element].reactions).includes("radiation")){
+            alert(elements[pixel.element].reactions.radiation.elem1)
+        }
         alert(Object.keys(elements.radiation.reactions).includes(pixel.element));
     }
 };
