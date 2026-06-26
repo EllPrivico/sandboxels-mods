@@ -18,7 +18,7 @@ elements.irradiate = {
             if (partners.includes("radiation")) {
                 let r = elemInfo.reactions.radiation;
                 let outcome = r.elem1 || r.elem2 || undefined;
-                foundProperties.push("Reacts to Radiation -> " + outcome);
+                foundProperties.push(outcome);
             }
         }
         if (elements.radiation && elements.radiation.reactions) {
@@ -26,9 +26,10 @@ elements.irradiate = {
             if (radPartners.includes(elemName)) {
                 let r = elements.radiation.reactions[elemName];
                 let outcome = r.elem1 || r.elem2 || undefined;
+                foundProperties.push(outcome);
             }
         }
-        alert(outcome);
+        alert(foundProperties);
     }
 };
 
