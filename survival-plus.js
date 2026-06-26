@@ -10,14 +10,12 @@ elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        var make = "";
-        if(Object.keys(elements.radiation.reactions).includes(pixel.element)){
-            make = (elements.radiation.reactions[pixel.element]).elem2
-        }
         if(Object.keys(elements[pixel.element].reactions).includes("radiation")){
-            make = elements[pixel.element].reactions.radiation.elem1
+            let make = elements[pixel.element].reactions.radiation.elem1
+        } else if(Object.keys(elements.radiation.reactions).includes(pixel.element)){
+            let make = (elements.radiation.reactions[pixel.element]).elem2
         }
-        alert(make)
+        alert(make);
     }
 };
 
