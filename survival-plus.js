@@ -5,6 +5,7 @@ elements.irradiate={
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
+        alert(Object.keys(elements.radiation.reactions))
         if (Object.keys(elements.radiation.reactions).includes(pixel.element)){
             alert(0)
         } else if (Object.keys(elements[pixel.element].reactions).includes("radiation")){
