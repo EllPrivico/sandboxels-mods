@@ -14,7 +14,7 @@ elements.irradiate = {
             alert(Object.keys(elements[pixel.element].reactions.radiation))
         }
         if(Object.keys(elements.radiation.reactions).includes(pixel.element)){
-            alert((elements.radiation.reactions[pixel.element]).elem2)
+            alert(Object.keys((elements.radiation.reactions[pixel.element])))
         }
     }
 };
