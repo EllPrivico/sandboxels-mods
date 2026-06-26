@@ -1,3 +1,5 @@
+elements.molten_dirt.stateHigh="magma";
+elements.molten_dirt.tempHigh=1400;
 Object.entries(elements).forEach(([key, value]) => {
     if (elements[key].desc){
         elements[key].desc+="\n";
