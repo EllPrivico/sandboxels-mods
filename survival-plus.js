@@ -51,7 +51,7 @@ function mbuyupdate(){
         var amount = 1;
         if (element.indexOf("*") !== -1) { amount = parseInt(element.split("*")[1]); name = element.split("*")[0]; }
         var elemname = name;
-        alert(amount);
+        line.insertAdjacentHTML("beforeend",`<p>You have $<span id="coinCount">${settings.survival.gold_coin||0}</span></p>`)
         name = (elements[elemname].name||name).replace(/_/g, " ").replace(".","   ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}).replace("   ",".").replace(/ /g, "");
     }
 }
