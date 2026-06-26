@@ -11,10 +11,10 @@ elements.irradiate = {
     category: "tools",
     tool: function(pixel) {
         if(Object.keys(elements[pixel.element].reactions).includes("radiation")){
-            alert(elements[pixel.element].reactions.radiation.elem2)
+            alert(elements[pixel.element].reactions.radiation.elem1)
         }
         if(Object.keys(elements.radiation.reactions).includes(pixel.element)){
-            alert(elements.radiation.reactions[pixel.element].elem1)
+            alert((elements.radiation.reactions[pixel.element]).elem2)
         }
     }
 };
