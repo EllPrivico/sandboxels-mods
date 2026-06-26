@@ -6,11 +6,20 @@ elements.molten_dirt.tempHigh=1400;
 //}
 //reloadbutton.innerHTML="hard reload"
 //document.body.prepend(reloadbutton);
-elements.irradiate={
+elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        alert(elements.radiation.reactions[pixel.element].elem1 || elements[pixel.element].reactions.radiation.elem2)
+        let elemName = pixel.element;
+        let radReaction = elements.radiation.reactions ? elements.radiation.reactions[elemName] : null;
+        let targetReaction = (elements[elemName].reactions && elements[elemName].reactions.radiation) ? elements[elemName].reactions.radiation : null;
+        if (radReaction && radReaction.elem1) {
+            alert("Radiation reaction found (elem1): " + radReaction.elem1);
+        } else if (targetReaction && targetReaction.elem2) {
+            alert("Target element reaction found (elem2): " + targetReaction.elem2);
+        } else {
+            alert("No radiation reaction found for: " + elemName);
+        }
     }
 };
 
