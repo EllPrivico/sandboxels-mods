@@ -1,6 +1,11 @@
 elements.molten_dirt.stateHigh="magma";
 elements.molten_dirt.tempHigh=1400;
+
+
+elements.paint.category="tools";
+elements.lookup.category="tools";
 Object.entries(elements).forEach(([key, value]) => {
+    elements[key].temporaryshiftsel=elements[key].onShiftSelect;
     if (elements[key].desc){
         elements[key].desc+="\n";
     } else {
