@@ -13,7 +13,7 @@ elements.irradiate={
         }
     }
 };
-var toolslistasdf = ["ruler","group","ungroup","unpaint","paint","lookup","pick","bless","explosion","cook","incinerate","room_temp","malware"]
+var toolslistasdf = ["ruler","unpaint","paint","lookup","explosion","cook","incinerate","room_temp","malware"]
 Object.entries(elements).forEach(([key, value]) => {
     if (toolslistasdf.includes(key)){
         elements[key].category = "tools";
