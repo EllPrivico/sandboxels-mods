@@ -1,3 +1,3 @@
 mod urls
 
-survival plus: `https://cdn.jsdelivr.net/gh/EllPrivico/sandboxels-mods@refs/heads/main/survival-plus.js`
+survival plus: `https://ellprivico.github.io/sandboxels-mods/survival-plus.js`
