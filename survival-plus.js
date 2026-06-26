@@ -49,9 +49,9 @@ Object.entries(elements).forEach(([key, value]) => {
     }
 });
 
-createCategoryDiv("multibuy");
-var multibuyDiv = document.getElementById("category-multibuy");
-multibuyDiv.style.display = "none";
+//createCategoryDiv("multibuy");
+//var multibuyDiv = document.getElementById("category-multibuy");
+//multibuyDiv.style.display = "none";
 
 function mbuyupdate(){
     multibuyDiv.innerHTML = "";
