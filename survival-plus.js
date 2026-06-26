@@ -73,4 +73,4 @@ function mbuyupdate(){
     }
 }
 
-mbuyupdate();
+//mbuyupdate();
