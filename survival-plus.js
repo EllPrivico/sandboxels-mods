@@ -12,9 +12,9 @@ elements.irradiate={
         }
     }
 };
-var toolslistasdf = ["paint","lookup","pick","bless","explosion","cook","incinerate","room_temp","malware"]
+var toolslistasdf = ["ruler","group","ungroup","unpaint","paint","lookup","pick","bless","explosion","cook","incinerate","room_temp","malware"]
 Object.entries(elements).forEach(([key, value]) => {
-    if ((elements[key].category==="edit") || (toolslistasdf.includes(key))){
+    if (toolslistasdf.includes(key)){
         elements[key].category = "tools";
         elementWorth[key]=0;
     }
