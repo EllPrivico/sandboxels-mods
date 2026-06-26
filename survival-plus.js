@@ -10,27 +10,7 @@ elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        let elemName = pixel.element;
-        let elemInfo = elements[elemName];
-        let foundProperties = [];
-        if (elemInfo.reactions) {
-            let partners = Object.keys(elemInfo.reactions);
-            alert(partners);
-            if (partners.includes("radiation")) {
-                let r = elemInfo.reactions.radiation;
-                let outcome = r.elem1 || r.elem2 || undefined;
-                foundProperties.push(outcome);
-            }
-        }
-        if (elements.radiation && elements.radiation.reactions) {
-            let radPartners = Object.keys(elements.radiation.reactions);
-            if (radPartners.includes(elemName)) {
-                let r = elements.radiation.reactions[elemName];
-                let outcome = r.elem1 || r.elem2 || undefined;
-                foundProperties.push(outcome);
-            }
-        }
-        alert(foundProperties);
+        alert(Object.keys(elements[pixel.element].reactions));
     }
 };
 
