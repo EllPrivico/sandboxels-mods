@@ -10,7 +10,7 @@ elements.irradiate={
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        alert(elements.radiation.reactions[pixel.element].elem1 || elements[pixel.element].reactions.radiaton.elem2)
+        alert(elements.radiation.reactions[pixel.element].elem1 || elements[pixel.element].reactions.radiation.elem2)
     }
 };
 
