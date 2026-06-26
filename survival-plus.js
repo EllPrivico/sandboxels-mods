@@ -13,6 +13,13 @@ elements.irradiate={
         alert(elements.radiation.reactions[pixel.element].elem1 || elements[pixel.element].reactions.radiaton.elem2)
     }
 };
+
+var ogsurvivalupdate = survivalUpdate
+
+function survivalUpdate(element){
+    survivalUpdate(element);
+    document.getElementById("mbuycoinCount").innerHTML = settings.survival.gold_coin||0;
+};
 var toolslistasdf = ["ruler","unpaint","paint","lookup","explosion","cook","incinerate","room_temp","malware"]
 Object.entries(elements).forEach(([key, value]) => {
     if (toolslistasdf.includes(key)){
@@ -43,7 +50,7 @@ multibuyDiv.style.display = "none";
 
 function mbuyupdate(){
     multibuyDiv.innerHTML = "";
-    multibuyDiv.insertAdjacentHTML("beforeend",`<p>You have $<span id="coinCount">${settings.survival.gold_coin||0}</span></p>`);
+    multibuyDiv.insertAdjacentHTML("beforeend",`<p>You have $<span id="mbuycoinCount">${settings.survival.gold_coin||0}</span></p>`);
     for (var element in survivalShop){
         var line = document.createElement("p");
         var price = survivalShop[element];
