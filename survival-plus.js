@@ -1,18 +1,18 @@
 Object.entries(elements).forEach(([key, value]) => {
-    if (!(elements[key].desc)){
-        elements[key].desc="";
-    } else {
+    if (elements[key].desc){
         elements[key].desc+="\n";
+    } else {
+        elements[key].desc="";
     }
     if (elementWorth[key]){
         if (elementWorth[key]>0){
             elements[key].desc+="Worth $"+elementWorth[key];
         } else if (elementWorth[key]===-1){
-            elements[key].desc+="Disappears if you try to sell it";
+            elements[key].desc+="Worth $0";
         } else {
             elements[key].desc+="Cannot be sold";
         }
     } else {
-        elements[key].desc+="\nWorth $1";
+        elements[key].desc+="Worth $1";
     }
 });
