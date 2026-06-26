@@ -11,6 +11,7 @@ elements.irradiate = {
     category: "tools",
     tool: function(pixel) {
         alert(Object.keys(elements[pixel.element].reactions).includes("radiation"));
+        alert(Object.keys(elements.radiation.reactions).includes(pixel.element));
     }
 };
 
