@@ -6,7 +6,7 @@ elements.molten_dirt.tempHigh=1400;
 //}
 //reloadbutton.innerHTML="hard reload"
 //document.body.prepend(reloadbutton);
-elements.irradiate = {
+elements.irradiate = { 
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
