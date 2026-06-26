@@ -15,6 +15,7 @@ elements.irradiate = {
         let foundProperties = [];
         if (elemInfo.reactions) {
             let partners = Object.keys(elemInfo.reactions);
+            alert(partners);
             if (partners.includes("radiation")) {
                 let r = elemInfo.reactions.radiation;
                 let outcome = r.elem1 || r.elem2 || undefined;
