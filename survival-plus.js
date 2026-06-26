@@ -5,7 +5,7 @@ reloadbutton.onclick = function(){
     window.location.reload(true);
 }
 reloadbutton.innerHTML="hard reload"
-document.body.
+document.body.prepend(reloadbutton);
 elements.irradiate={
     color: elements.radiation.color,
     category: "tools",
