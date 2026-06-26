@@ -4,7 +4,11 @@ elements.molten_dirt.tempHigh=1400;
 elements.irradiate={
     color: elements.radiation.color,
     category: "tools",
-    tool: elements.lookup.tool
+    tool: function(pixel) {
+        if (Object.keys(elements.radiation.reactions)){
+            
+        }
+    }
 };
 var toolslistasdf = ["paint","lookup","pick","bless","explosion","cook","incinerate","room_temp","malware"]
 Object.entries(elements).forEach(([key, value]) => {
