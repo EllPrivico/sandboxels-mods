@@ -10,12 +10,7 @@ elements.irradiate={
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        alert(elements[pixel.element].reactions.radiaton)
-        if (Object.keys(elements.radiation.reactions).includes(pixel.element)){
-            alert(0)
-        } else if (Object.keys(elements[pixel.element].reactions).includes("radiation")){
-            alert(1)
-        }
+        alert(elements.radiation.reactions[pixel.element].elem1 || elements[pixel.element].reactions.radiaton.elem2)
     }
 };
 var toolslistasdf = ["ruler","unpaint","paint","lookup","explosion","cook","incinerate","room_temp","malware"]
