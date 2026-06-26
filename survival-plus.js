@@ -1,11 +1,16 @@
 elements.molten_dirt.stateHigh="magma";
 elements.molten_dirt.tempHigh=1400;
-
+var reloadbutton = document.createElement("button");
+reloadbutton.onclick = function(){
+    window.location.reload(true);
+}
+reloadbutton.innerHTML="hard reload"
+document.body.
 elements.irradiate={
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        alert(elements.radiation.reactions[pixel.element])
+        alert(elements[pixel.element].reactions.radiaton)
         if (Object.keys(elements.radiation.reactions).includes(pixel.element)){
             alert(0)
         } else if (Object.keys(elements[pixel.element].reactions).includes("radiation")){
