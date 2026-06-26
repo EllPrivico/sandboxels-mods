@@ -11,15 +11,24 @@ elements.irradiate = {
     category: "tools",
     tool: function(pixel) {
         let elemName = pixel.element;
-        let radReaction = elements.radiation.reactions ? elements.radiation.reactions[elemName] : null;
-        let targetReaction = (elements[elemName].reactions && elements[elemName].reactions.radiation) ? elements[elemName].reactions.radiation : null;
-        if (radReaction && radReaction.elem1) {
-            alert("Radiation reaction found (elem1): " + radReaction.elem1);
-        } else if (targetReaction && targetReaction.elem2) {
-            alert("Target element reaction found (elem2): " + targetReaction.elem2);
-        } else {
-            alert("No radiation reaction found for: " + elemName);
+        let elemInfo = elements[elemName];
+        let foundProperties = [];
+        if (elemInfo.reactions) {
+            let partners = Object.keys(elemInfo.reactions);
+            if (partners.includes("radiation")) {
+                let r = elemInfo.reactions.radiation;
+                let outcome = r.elem1 || r.elem2 || undefined;
+                foundProperties.push("Reacts to Radiation -> " + outcome);
+            }
         }
+        if (elements.radiation && elements.radiation.reactions) {
+            let radPartners = Object.keys(elements.radiation.reactions);
+            if (radPartners.includes(elemName)) {
+                let r = elements.radiation.reactions[elemName];
+                let outcome = r.elem1 || r.elem2 || undefined;
+            }
+        }
+        alert(outcome);
     }
 };
 
