@@ -37,6 +37,7 @@ elements.irradiate = {
             //}
             //survivalAdd(make,1);
         //}
+        alert(a.initiator);
         alert(Object.keys(a.info));
     }
 };
