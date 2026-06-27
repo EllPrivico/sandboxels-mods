@@ -21,10 +21,10 @@ elements.irradiate = {
 
 var ogsurvivalupdate = survivalUpdate
 
-function survivalUpdate(element){
-    survivalUpdate(element);
-    document.getElementById("mbuycoinCount").innerHTML = settings.survival.gold_coin||0;
-};
+//function survivalUpdate(element){
+    //survivalUpdate(element);
+    //document.getElementById("mbuycoinCount").innerHTML = settings.survival.gold_coin||0;
+//};
 var toolslistasdf = ["ruler","unpaint","paint","lookup","explosion","cook","incinerate","room_temp","malware"]
 Object.entries(elements).forEach(([key, value]) => {
     if (toolslistasdf.includes(key)){
