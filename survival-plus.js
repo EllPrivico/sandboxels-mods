@@ -48,6 +48,7 @@ elements.irradiate = {
                 makethis = a.info.elem2;
             }
             alert(makethis);
+            changePixel(pixel,makethis);
         }
         } catch (error){
             alert(error.message)
