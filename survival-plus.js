@@ -29,14 +29,15 @@ elements.irradiate = {
     category: "tools",
     tool: function(pixel) {
         let a = reactcheck("radiation",pixel.element);
-        if (a){
-            if (a.initiator === "radiation"){
-                let make = a.info.elem1;
-            } else {
-                let make = a.info.elem2;
-            }
-            survivalAdd(make,1);
-        }
+        //if (a){
+            //if (a.initiator === "radiation"){
+                //let make = a.info.elem1;
+            //} else {
+                //let make = a.info.elem2;
+            //}
+            //survivalAdd(make,1);
+        //}
+        alert(Object.keys(a));
     }
 };
 
