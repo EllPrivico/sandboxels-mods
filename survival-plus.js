@@ -39,13 +39,12 @@ elements.irradiate = {
         //}
         if (a) {
             if (a.initiator === pixel.element){
-                alert(a.info.elem1);
+                let makethis = a.info.elem1;
             } else {
-                alert(a.info.elem2);
+                let makethis = a.info.elem2;
             }
         }
-        alert(a.initiator);
-        alert(Object.keys(a.info));
+        alert(makethis);
     }
 };
 
