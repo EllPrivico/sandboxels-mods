@@ -45,7 +45,7 @@ elements.irradiate = {
             } else {
                 let makethis = a.info.elem2;
             }
-            changePixel(pixel, makethis);
+            alert(makethis);
         }
         
     }
