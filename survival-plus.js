@@ -12,7 +12,7 @@ dependOn("betterMenuScreens.js", function(){
 },true)
 
 var bigshop = MenuScreen(innerHTML="asdf");
-openMenu(bigshop, true);
+
 function reactcheck(elem1, elem2) {
     if (elements[elem1] && elements[elem1].reactions && elements[elem1].reactions[elem2]) {
         return {
@@ -35,6 +35,7 @@ elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
+        openMenu(bigshop, true);
         try{
         let a = reactcheck("radiation",pixel.element);
         //if (a){
