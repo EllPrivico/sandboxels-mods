@@ -25,11 +25,12 @@ function reactcheck(elem1, elem2) {
     }
     return null;
 }
-try{
+
 elements.irradiate = { 
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
+        try{
         let a = reactcheck("radiation",pixel.element);
         //if (a){
             //if (a.initiator === "radiation"){
@@ -47,12 +48,11 @@ elements.irradiate = {
             }
             alert(makethis);
         }
-        
+        } catch (error){
+            alert(error.message)
+        }
     }
 };
-} catch(error){
-    alert(error.message);
-}
 
 var ogsurvivalupdate = survivalUpdate
 
