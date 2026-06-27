@@ -7,6 +7,9 @@ elements.molten_dirt.tempHigh=1400;
 //reloadbutton.innerHTML="hard reload"
 //document.body.prepend(reloadbutton);
 
+function asdfgh(oen, two){
+    return (oen && two) || (!oen)
+}
 function reactcheck(elem1, elem2) {
     if (elements[elem1] && elements[elem1].reactions && elements[elem1].reactions[elem2]) {
         return {
@@ -43,6 +46,13 @@ elements.irradiate = {
             } else {
                 let makethis = a.info.elem2;
             }
+            let tempmin = a.info.tempMin ?? 0;
+            let tempmax = a.info.tempMax ?? Infinity;
+            let asdf = [pixel.temp > (a.info.tempMin ?? 0), 
+                pixel.temp < (a.info.tempMax ?? Infinity),
+                pixel.y < (a.info.y[1] ?? Infinity),
+                pixel.y > (a.info.y[0] ?? 0)]
+            alert(asdf.every(item => item === true))
         }
         alert(makethis);
     }
