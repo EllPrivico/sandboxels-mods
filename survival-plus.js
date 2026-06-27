@@ -7,7 +7,12 @@ elements.molten_dirt.tempHigh=1400;
 //reloadbutton.innerHTML="hard reload"
 //document.body.prepend(reloadbutton);
 
+dependOn("betterMenuScreens.js", function(){
+    console.log("filler code")
+},true)
 
+var bigshop = MenuScreen(innerHTML="asdf");
+openMenu(bigshop, true);
 function reactcheck(elem1, elem2) {
     if (elements[elem1] && elements[elem1].reactions && elements[elem1].reactions[elem2]) {
         return {
