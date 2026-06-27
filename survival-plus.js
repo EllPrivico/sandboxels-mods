@@ -51,7 +51,7 @@ elements.irradiate = {
     }
 };
 } catch(error){
-    alert(error.message)(
+    alert(error.message);
 }
 
 var ogsurvivalupdate = survivalUpdate
