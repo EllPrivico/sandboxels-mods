@@ -28,7 +28,15 @@ elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        alert(reactcheck("radiation",pixel.element));
+        let a = reactcheck("radiation",pixel.element);
+        if (a){
+            if (a.initiator === "radiation"){
+                let make = a.info.elem1;
+            } else {
+                let make = a.info.elem2;
+            }
+            alert(make);
+        }
     }
 };
 
