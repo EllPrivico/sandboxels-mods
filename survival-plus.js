@@ -41,15 +41,16 @@ elements.irradiate = {
         //}
         if (a) {
             if (a.initiator === pixel.element){
-                let makethis = a.info.elem1 ?? a.info.elem2;
+                let makethis = a.info.elem1;
             } else {
-                let makethis = a.info.elem2 ?? a.info.elem1;
+                let makethis = a.info.elem2;
             }
             changePixel(pixel, makethis);
         }
         
     }
-};} catch(error){
+};
+} catch(error){
     alert(error.message)(
 }
 
