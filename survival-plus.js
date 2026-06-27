@@ -8,10 +8,11 @@ elements.molten_dirt.tempHigh=1400;
 //document.body.prepend(reloadbutton);
 
 dependOn("betterMenuScreens.js", function(){
-    console.log("filler code")
+    var bigshop = MenuScreen(innerHTML="asdf");
+    openMenu(bigshop, true);
 },true)
 
-var bigshop = MenuScreen(innerHTML="asdf");
+
 
 function reactcheck(elem1, elem2) {
     if (elements[elem1] && elements[elem1].reactions && elements[elem1].reactions[elem2]) {
@@ -35,7 +36,7 @@ elements.irradiate = {
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        openMenu(bigshop, true);
+        
         try{
         let a = reactcheck("radiation",pixel.element);
         //if (a){
