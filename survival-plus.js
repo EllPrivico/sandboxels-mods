@@ -7,10 +7,9 @@ elements.molten_dirt.tempHigh=1400;
 //reloadbutton.innerHTML="hard reload"
 //document.body.prepend(reloadbutton);
 
-dependOn("betterMenuScreens.js", function(){
-    var bigshop = MenuScreen(innerHTML="asdf");
-    openMenu(bigshop, true);
-},true)
+dependOn("survival.js", function(){
+    alert(0);
+}
 
 
 
