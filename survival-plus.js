@@ -6,16 +6,29 @@ elements.molten_dirt.tempHigh=1400;
 //}
 //reloadbutton.innerHTML="hard reload"
 //document.body.prepend(reloadbutton);
+
+function reactcheck(elem1, elem2) {
+    if (elements[elem1] && elements[elem1].reactions && elements[elem1].reactions[elem2]) {
+        return {
+            initiator: elem1,
+            target: elem2,
+            info: elements[elem1].reactions[elem2]
+        };
+    }
+    if (elements[elem2] && elements[elem2].reactions && elements[elem2].reactions[elem1]) {
+        return {
+            initiator: elem2,
+            target: elem1,
+            info: elements[elem2].reactions[elem1]
+        };
+    }
+    return null;
+}
 elements.irradiate = { 
     color: elements.radiation.color,
     category: "tools",
     tool: function(pixel) {
-        if(Object.keys(elements[pixel.element].reactions).includes("radiation")){
-            let make = elements[pixel.element].reactions.radiation.elem1
-        } else if(Object.keys(elements.radiation.reactions).includes(pixel.element)){
-            let make = (elements.radiation.reactions[pixel.element]).elem2
-        }
-        alert(make);
+        alert(reactcheck("radiation",pixel.element));
     }
 };
 
