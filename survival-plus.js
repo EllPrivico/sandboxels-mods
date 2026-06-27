@@ -25,6 +25,7 @@ function reactcheck(elem1, elem2) {
     }
     return null;
 }
+try{
 elements.irradiate = { 
     color: elements.radiation.color,
     category: "tools",
@@ -48,7 +49,9 @@ elements.irradiate = {
         }
         
     }
-};
+};} catch(error){
+    alert(error.message)(
+}
 
 var ogsurvivalupdate = survivalUpdate
 
