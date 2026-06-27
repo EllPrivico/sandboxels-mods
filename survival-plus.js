@@ -47,7 +47,7 @@ elements.irradiate = {
             } else {
                 makethis = a.info.elem2;
             }
-            alert(makethis);
+            //alert(makethis);
             changePixel(pixel,makethis);
         }
         } catch (error){
