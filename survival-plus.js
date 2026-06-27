@@ -35,7 +35,7 @@ elements.irradiate = {
             } else {
                 let make = a.info.elem2;
             }
-            alert(make);
+            survivalAdd(make,1);
         }
     }
 };
